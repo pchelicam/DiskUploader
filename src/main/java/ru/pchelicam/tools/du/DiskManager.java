@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Entry class - starts IDisk application
+ * Entry class - starts Disk Uploader application
  */
 public class DiskManager {
     public static boolean controller(String[] s) {
