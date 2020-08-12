@@ -16,6 +16,12 @@ where TypeOfTheDisk is YA or DB, MinRest is minimum number of files that can be 
 
 Also, if you have spaces in your name of the file to upload, or in name of the catalog in storage, wrap it in apostrophes.
 
+In addition, Disk Uploader is an utility that has these several features:
+*	upload file to catalog in storage;
+*	delete files when free space in storage is not enough;
+*	delete files to fit in specified parameters on catalog;
+*	send an email every time application works.
+
 ## Requirements
 
 Disk Uploader requires JDK 1.6 or higher.
