@@ -1,4 +1,4 @@
-# Disk Uploader – Java File Uploading Tool for Dropbox and Yandex.Disk
+# Disk Uploader – File Uploading Tool for Dropbox and Yandex.Disk
 
 Disk Uploader is a Java Tool. It is intended for working with different file storages. For now it can work with Yandex.Disk and Dropbox.
 
