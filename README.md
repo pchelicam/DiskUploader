@@ -12,9 +12,7 @@ You can run Disk Uploader from command line, for example:
 
 java -jar DiskUploader-1.0-jar-with-dependencies.jar --td=TypeOfTheDisk --fu=path\\to\\file\\file_name.txt --cu=/NameOfCatalogOnDisk/ --at=YourAuthenticationToken --tr=TopRest --mr=MinRest,
 
-where TypeOfTheDisk is YA or DB, MinRest is minimum number of files that can be store in catalog, TopRest is maximum number of files that can be stored in catalog. Use only latin letters in --fu, --cu parameters.
-
-To work with Cloud Mail.ru, you should specify parameters --td=MRC, --un=YourUserName and --pw=YourPassword. To work with Yandex Object Storage, you should specify parameters --td=YOS, --kid=YourKeyID and --sac=YourSecretAccessKey.
+where TypeOfTheDisk is YA or DB or MRC or YOS, MinRest is minimum number of files that can be store in catalog, TopRest is maximum number of files that can be stored in catalog. Use only latin letters in --fu, --cu parameters. To work with Cloud Mail.ru you should specify parameters --un=YourUserName and --pw=YourPassword. To work with Yandex Object Storage you should specify parameters --kid=YourKeyID and --sac=YourSecretAccessKey.
 
 Also, if you have spaces in your name of the file to upload, or in name of the catalog in storage, wrap it in apostrophes.
 
