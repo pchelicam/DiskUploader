@@ -124,12 +124,6 @@ public class DiskManager {
     }
 
     public static void main(String[] s) {
-        //String s1 = "--td=YOS --fu=C:\\\\Users\\\\user\\\\Downloads\\\\File3.txt --cu=testing5678 --kid=V6-bJVh0xk6MZqgfzCG- --sac=_ANhe9az5ePRnc4cb9nTDiWFCcYiCy76yYPnxV6B --tr=3 --mr=1";
-        //String s1 = "--td=MRC --fu=C:\\\\Users\\\\user\\\\Downloads\\\\File1.txt --cu=/Test3/ --un=shaimardanova_anar@mail.ru --pw=u_Ik33pciXDT";
-        //String s1 = "--td=MRC --fu=C:\\Users\\user\\Downloads\\Projects123.zip --cu=/Test3/ --un=shaimardanova_anar@mail.ru --pw=u_Ik33pciXDT --mr=7 --tr=8";
-        //String s1 = "--td=YA --fu=C:\\Users\\user\\Downloads\\fegh.txt --cu=/Test/ --at=AgAAAAAEvAoZAAXGiyNvxjNX1Ub3lKZgMN9a2qw --mr=1 --tr=10";
-
-        //String [] s2 = s1.split(" ");
         controller(s);
     }
 }
