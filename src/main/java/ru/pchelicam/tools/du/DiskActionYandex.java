@@ -27,6 +27,10 @@ public class DiskActionYandex implements IActionDisk {
         this.authToken = authToken;
     }
 
+    public void authorize(String username, String password){
+
+    }
+
     public DiskInfo getInfoOfDisk() throws Exception {
         Client client = Client.create();
         WebResource webResource = client.resource(wURL + "/v1/disk/");

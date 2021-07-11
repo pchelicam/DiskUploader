@@ -5,7 +5,9 @@ package ru.pchelicam.tools.du;
  */
 public enum TypeDiskEnum {
     YA,
-    DB;
+    DB,
+    MRC,
+    YOS;
 
     /**
      * Gets String value of the type
@@ -17,6 +19,10 @@ public enum TypeDiskEnum {
                 return TypeDiskEnum.YA;
             } else if (tde.DB.toString().equals(type)) {
                 return TypeDiskEnum.DB;
+            } else if (tde.MRC.toString().equals(type)) {
+                return TypeDiskEnum.MRC;
+            } else if (tde.YOS.toString().equals(type)) {
+                return TypeDiskEnum.YOS;
             }
         }
         return null;

@@ -16,6 +16,12 @@ public class CmdParser {
     private final static String PAR_REG_CU = "[\\-][\\-]cu[\\=](\\S*)";
     private final static String PAR_REG_AT = "[\\-][\\-]at[\\=](\\S*)";
 
+    private final static String PAR_REG_UN = "[\\-][\\-]un[\\=](\\S*)";
+    private final static String PAR_REG_PW = "[\\-][\\-]pw[\\=](\\S*)";
+
+    private final static String PAR_REG_KID = "[\\-][\\-]kid[\\=](\\S*)";
+    private final static String PAR_REG_SAC = "[\\-][\\-]sac[\\=](\\S*)";
+
     /**
      * Parses td parameter
      */
@@ -99,6 +105,58 @@ public class CmdParser {
      */
     public String parseParameterAt(String par) {
         Pattern patternAt = Pattern.compile(PAR_REG_AT, Pattern.DOTALL);
+        Matcher matcherAt = patternAt.matcher(par);
+        String token = null;
+        if (matcherAt.find()) {
+            token = matcherAt.group(1).trim();
+        }
+        return token;
+    }
+
+    /**
+     * Parses un parameter
+     */
+    public String parseParameterUn(String par) {
+        Pattern patternAt = Pattern.compile(PAR_REG_UN, Pattern.DOTALL);
+        Matcher matcherAt = patternAt.matcher(par);
+        String token = null;
+        if (matcherAt.find()) {
+            token = matcherAt.group(1).trim();
+        }
+        return token;
+    }
+
+    /**
+     * Parses pw parameter
+     */
+    public String parseParameterPw(String par) {
+        Pattern patternAt = Pattern.compile(PAR_REG_PW, Pattern.DOTALL);
+        Matcher matcherAt = patternAt.matcher(par);
+        String token = null;
+        if (matcherAt.find()) {
+            token = matcherAt.group(1).trim();
+        }
+        return token;
+    }
+
+    /**
+     * Parses kid parameter
+     */
+    public String parseParameterKid(String par) {
+        Pattern patternAt = Pattern.compile(PAR_REG_KID, Pattern.DOTALL);
+        Matcher matcherAt = patternAt.matcher(par);
+        String token = null;
+        if (matcherAt.find()) {
+            token = matcherAt.group(1).trim();
+        }
+        return token;
+    }
+
+    /**
+     * Parses sac parameter
+     */
+    public String parseParameterSac(String par) {
+        Pattern patternAt = Pattern.compile(PAR_REG_SAC, Pattern.DOTALL);
         Matcher matcherAt = patternAt.matcher(par);
         String token = null;
         if (matcherAt.find()) {

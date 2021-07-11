@@ -13,8 +13,8 @@ public class MailSettingsValidator {
             JAXBContext jaxbContext = JAXBContext.newInstance(MailSettings.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
-            if ((new File(System.getProperty("user.dir") + "/IDiskSettings.xml")).exists()) {
-                MailSettings mailSettings = (MailSettings) unmarshaller.unmarshal(new File(System.getProperty("user.dir") + "/IDiskSettings.xml"));
+            if ((new File(System.getProperty("user.dir") + "/DiskSettings.xml")).exists()) {
+                MailSettings mailSettings = (MailSettings) unmarshaller.unmarshal(new File(System.getProperty("user.dir") + "/DiskSettings.xml"));
                 if (mailSettings.getEmail().isEmpty() || mailSettings.getUsername().isEmpty()
                         || mailSettings.getPassword().isEmpty() || mailSettings.getHost().isEmpty()
                         || mailSettings.getPort().isEmpty() || mailSettings.getEncryption().isEmpty()

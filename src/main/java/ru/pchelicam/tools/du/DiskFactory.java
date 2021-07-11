@@ -14,6 +14,12 @@ public class DiskFactory {
         if(type.equals(TypeDiskEnum.DB)){
             disk = new DiskActionDropbox();
         }
+        if(type.equals(TypeDiskEnum.MRC)){
+            disk = new DiskActionMailRu();
+        }
+        if(type.equals(TypeDiskEnum.YOS)){
+            disk = new DiskActionYandexObjectStorage();
+        }
         return disk;
     }
 }

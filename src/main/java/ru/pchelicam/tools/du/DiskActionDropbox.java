@@ -26,6 +26,10 @@ public class DiskActionDropbox implements IActionDisk {
         this.authToken = authToken;
     }
 
+    public void authorize(String username, String password){
+
+    }
+
     public DiskInfo getInfoOfDisk() {
         Client client = Client.create();
         WebResource webResource = client.resource(wURL + "/2/users/get_space_usage");

@@ -15,6 +15,12 @@ public interface IActionDisk {
     void authorize(String authToken);
 
     /**
+     * Uses to declare username and
+     * password in class
+     */
+    void authorize(String username, String password);
+
+    /**
      * Prints information of the disk
      */
     DiskInfo getInfoOfDisk() throws Exception;
