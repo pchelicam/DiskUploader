@@ -1,12 +1,12 @@
-# Disk Uploader – File Uploading Tool for Dropbox and Yandex.Disk
+# Disk Uploader – File Uploading Tool for Dropbox, Yandex.Disk, Cloud Mail.ru and Yandex Object Storage
 
-Disk Uploader is a Java Tool. It is intended for working with different file storages. For now it can work with Yandex.Disk and Dropbox.
+Disk Uploader is a Java Tool. Its main purpose is upload file in file storage. Disk Uploader can work with different file storages. For now it can work with Dropbox, Yandex.Disk, Cloud Mail.ru and Yandex Object Storage.
 
 ## Features
 
 You can use Disk Uploader to upload files in your storage. Also, Disk Uploader is suitable for uploading database archives. Furthermore, you can set some parameters to specify lower and upper bounds for files that can be stored in your catalog.
 
-Also, you can set a .xml file and receive emails every time when Disk Uploader sends files to your storage successfully or catches an error at this operation.
+Also, you can set a DiskSettings.xml file and receive emails every time when Disk Uploader sends files to your storage successfully or catches an error at this operation.
 
 You can run Disk Uploader from command line, for example:
 
@@ -14,7 +14,11 @@ java -jar DiskUploader-1.0-jar-with-dependencies.jar --td=TypeOfTheDisk --fu=pat
 
 where TypeOfTheDisk is YA or DB, MinRest is minimum number of files that can be store in catalog, TopRest is maximum number of files that can be stored in catalog. Use only latin letters in --fu, --cu parameters.
 
+To work with Cloud Mail.ru, you should specify parameters --td=MRC, --un=YourUserName and --pw=YourPassword. To work with Yandex Object Storage, you should specify parameters --td=YOS, --kid=YourKeyID and --sac=YourSecretAccessKey.
+
 Also, if you have spaces in your name of the file to upload, or in name of the catalog in storage, wrap it in apostrophes.
+
+If you need to use Disk Uploader in Java project, you can add .jar file to your project and use the utility through DiskParameters class.
 
 In addition, Disk Uploader is an utility that has these several features:
 *	upload file to catalog in storage;
