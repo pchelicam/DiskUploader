@@ -40,7 +40,7 @@ Firstly, go to [page](https://oauth.yandex.ru/) and click on Register a new appl
 
 Then, enter the name of new application. Tick on Web service and add two callback URIs - [https://oauth.yandex.ru/verification_code](https://oauth.yandex.ru/verification_code). Also, tick all fields refers to Rest API.
 
-After creating an application, go to URL https://oauth.yandex.ru/authorize?response_type=token&client_id=<application id>, where application ID you can find in application description.
+After creating an application, go to URL `https://oauth.yandex.ru/authorize?response_type=token&client_id=<application id>`, where application ID you can find in application description.
 
 After clicking Accept, you will be redirected to the page with URL like this: 
 
