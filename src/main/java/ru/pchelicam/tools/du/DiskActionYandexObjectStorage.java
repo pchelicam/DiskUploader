@@ -231,6 +231,7 @@ public class DiskActionYandexObjectStorage implements IActionDisk {
             throw new DiskException("Catalog " + folderName + " does not exist in storage");
         for (FileInfo fileInfo : listOfFilesToDelete) {
             deleteFile(folderName, fileInfo.getFileName().replaceAll("%20", " "));
+            DiskLogger.info("File " + fileInfo.getFileName().replaceAll("%20", " ") + " was deleted");
         }
         return null;
     }

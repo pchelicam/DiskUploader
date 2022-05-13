@@ -26,7 +26,7 @@ public class DiskActionDropbox implements IActionDisk {
         this.authToken = authToken;
     }
 
-    public void authorize(String username, String password){
+    public void authorize(String username, String password) {
 
     }
 
@@ -104,7 +104,7 @@ public class DiskActionDropbox implements IActionDisk {
         WebResource webResource = client.resource("https://content.dropboxapi.com/2/files/upload");
         ClientResponse response = null;
         response = webResource.header("Authorization", "Bearer " + authToken)
-                .header("Dropbox-API-Arg", "{\"path\": \"/Test/" + fileName + "\", \"mode\": \"add\", \"autorename\": true, \"mute\": false, \"strict_conflict\": false}")
+                .header("Dropbox-API-Arg", "{\"path\": \"" + folderName + fileName + "\", \"mode\": \"add\", \"autorename\": true, \"mute\": false, \"strict_conflict\": false}")
                 .header("Content-Type", "application/octet-stream")
                 .post(ClientResponse.class, file);
         if (response.getStatus() == 409) {
@@ -127,6 +127,7 @@ public class DiskActionDropbox implements IActionDisk {
         response = webResource.header("Authorization", "Bearer " + authToken)
                 .header("Content-Type", "application/json")
                 .post(ClientResponse.class, jsonObject.toString());
+        DiskLogger.info("File " + fileName + " was deleted");
 
         return null;
     }
@@ -143,6 +144,7 @@ public class DiskActionDropbox implements IActionDisk {
             response = webResource.header("Authorization", "Bearer " + authToken)
                     .header("Content-Type", "application/json")
                     .post(ClientResponse.class, jsonObject.toString());
+            DiskLogger.info("File " + fileInfo.getFileName().replaceAll("%20", " ") + " was deleted");
         }
         return null;
 

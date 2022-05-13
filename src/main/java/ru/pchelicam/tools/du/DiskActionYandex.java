@@ -132,7 +132,7 @@ public class DiskActionYandex implements IActionDisk {
         for (int i = 0; i < listOfFilesToDelete.size(); i++) {
             fileInfo = listOfFilesToDelete.get(i);
             response = webResource.queryParam("path", folderName + fileInfo.getFileName()).header("Authorization", authToken).delete(ClientResponse.class);
-            DiskLogger.info("File " + fileInfo.getFileName() + " was deleted");
+            DiskLogger.info("File " + fileInfo.getFileName().replaceAll("%20", " ") + " was deleted");
         }
         return null;
     }
