@@ -3,10 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+         
     <groupId>ru.pchelikam.tools.du</groupId>
     <artifactId>DiskUploader</artifactId>
     <version>1.0</version>
+         
     <dependencies>
         <dependency>
             <groupId>javax.mail</groupId>
@@ -65,8 +66,6 @@
             <version>1.11</version>
         </dependency>
      </dependencies>
-
-
      <build>
          <plugins>
              <plugin>
@@ -103,6 +102,4 @@
              </plugin>
          </plugins>
      </build>
-
-
  </project>
